@@ -2,16 +2,6 @@ pub fn fibonacci_nth(nth: u32) -> u32 {
     // fibonacci number
     let (mut fibo_number, mut count, mut x, mut y) = (0, 1, 0, 1);
 
-    // 0 = 0, 1 = 0, 2 = 1, 3 = 1,
-    // 0 1 1 2 3 5 8 13
-    // '
-    // x = 0
-    // y = 1
-    // fibo_number = x + y = 1
-    // '' x = y  
-    // 
-    //
-
     loop {
         if count >= nth {
             break;
