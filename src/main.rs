@@ -1,5 +1,4 @@
 mod routes;
-mod fibonacci;
 
 use actix_web::*;
 use routes::{ping, root, fibonacci_route};
