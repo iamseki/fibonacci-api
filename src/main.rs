@@ -1,7 +1,8 @@
-use actix_web::*;
-
 mod routes;
-use routes::{ping, root};
+mod fibonacci;
+
+use actix_web::*;
+use routes::{ping, root, fibonacci_route};
 
 #[actix_web::main]
 async fn main() -> Result<(), std::io::Error> {
@@ -9,6 +10,7 @@ async fn main() -> Result<(), std::io::Error> {
         App::new()
         .route("/", web::get().to(root))
         .route("/ping", web::get().to(ping))
+        .service(fibonacci_route)
     });
 
     let port = 8080;
